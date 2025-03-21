@@ -1,0 +1,56 @@
+cat myconfig01.txt 
+# Sample config file for pi-gen 01/31/2025 Debian 12.09 VM
+
+# The default image name
+IMG_NAME='WancoPiOSDQ'
+
+# The default user name
+FIRST_USER_NAME='wanco'
+
+# The default password for the user
+FIRST_USER_PASS='wanco'
+
+# added 02/03/2025
+# Disable the renaming of the first user during the first boot. 
+# This make it so FIRST_USER_NAME stays activated. 
+# FIRST_USER_PASS must be set for this to work. 
+# Please be aware of the implied security risk of defining a default username 
+# and password for your devices.
+DISABLE_FIRST_BOOT_USER_RENAME=1
+
+# The hostname for the Raspberry Pi
+HOSTNAME='wanco-pi'
+
+# Enable SSH
+ENABLE_SSH=1
+
+# Locale settings
+LOCALE_DEFAULT='en_US.UTF-8'
+
+# Timezone settings
+TIMEZONE_DEFAULT='America/Denver'
+
+# Keyboard layout
+KEYBOARD_KEYMAP='us'
+KEYBOARD_LAYOUT='English (US)'
+
+# define use of QEMU
+USE_QEMU=0
+
+# define compression - default zip
+# DEPLOY_COMPRESSION='gz'
+
+# WiFi settings
+#WPA_ESSID='your_wifi_ssid'
+#WPA_PASSWORD='your_wifi_password'
+#WPA_COUNTRY='US'
+
+# Custom scripts to run at different stages
+STAGE_LIST='stage0 stage1 stage2'
+
+# Additional packages to install
+# INSTALL_PACKAGES='vim git curl emacs'
+
+# Custom scripts to run at different stages
+# CUSTOM_SCRIPTS='path/to/your/script.sh'
+
